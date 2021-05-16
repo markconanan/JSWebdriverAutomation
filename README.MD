@@ -1,7 +1,7 @@
 # JS Webdriver Automation: Sample Page
 This repo contains an automation framework for a sample form page found in https://www.globalsqa.com/samplepagetest.
 
-# Dependencies
+# Requirements
 * Node.js
 * Java -- Needed to run the selenium server
 * Chrome
