@@ -2,5 +2,9 @@
     "name": "Mark",
     "invalidEmail": "sample",
     "email": "test@test.com",
+    "website": "http://sample.com",
+    "experience": "0-1",
+    "expertise": "Functional Testing, Automation Testing",
+    "education": "Graduate",
     "comment": "sample comment"
 }
