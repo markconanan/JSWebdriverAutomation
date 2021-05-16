@@ -8,6 +8,29 @@ class SamplePage {
         $('#g2599-email').setValue(email)
     }
 
+    enterWebsite(website) {
+        $('#g2599-website').setValue(website)
+    }
+
+    selectExperienceInYears(years) {
+        const experience = $('#g2599-experienceinyears')
+        experience.selectByVisibleText(years)
+    }
+
+    selectExpertise(expertise) {
+        if (expertise.includes('Functional')) {
+            $(`input[value='Functional Testing']`).click()
+        } if (expertise.includes('Automation')) {
+            $(`input[value='Automation Testing']`).click()
+        } if (expertise.includes('Manual')) {
+            $(`input[value='Manual Testing']`).click()
+        }
+    }
+
+    selectEducation(education) {
+        $(`input[value='${education}']`).click()
+    }
+
     enterComment(comment) {
         $('#contact-form-comment-g2599-comment').setValue(comment)
     }
@@ -42,6 +65,14 @@ class SamplePage {
     getCommentValidationMessage() {
         const message = $('#contact-form-comment-g2599-comment').getAttribute("validationMessage")
         return message
+    }
+
+    validateSubmittedForm(data) {
+        this.getContactFormSubmission().should.contain(data.name)
+        this.getContactFormSubmission().should.contain(data.email)
+        this.getContactFormSubmission().should.contain(data.website)
+        this.getContactFormSubmission().should.contain(data.education)
+        this.getContactFormSubmission().should.contain(data.comment)
     }
 
 }
